@@ -19,7 +19,7 @@ input_=st.text_input('enter git page')
 #  f.write(input_+'\n')
 b1=st.button('ngrok?')
 if b1:
-  public_url = ngrok.connect(port='80')
+  public_url = ngrok.connect(port='8501')
   st.write(public_url)
 #if input_ is not None:
 #  st.write(public_url)
