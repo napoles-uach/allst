@@ -43,4 +43,4 @@ if b3:
   
 b4=st.button('bash?')
 if b4:
-  os.system("bash /app/allst/script.sh")
+  os.system("bash /app/allst/script.sh > output.txt")
