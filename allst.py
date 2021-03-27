@@ -37,4 +37,6 @@ with open('script.sh', 'w') as f:
 #    f.write("echo finish >> outputpip")
 #    f.write("streamlit run --server.port 80 app.py >/dev/null")
   
-subprocess.call("ls")
+b3=st.button('ls?')
+if b3:
+  subprocess.call("ls")
