@@ -31,17 +31,16 @@ if b2:
 with open('script.sh', 'w') as f:
   f.write("#!/bin/bash\n")
   if input_ is not None:
-    f.write("wget "+input_)
-  #f.write("git clone -l -s "+input_ +"\n")
-  #f.write("OUTPUT=$(basename " +input_+" .git)\n")
-  #f.write("cd " +""" $OUTPUT """+"\n")
-  #f.write("pip install -r requirements.txt >> outputpip")
-  #f.write("echo finish >> outputpip")
-  f.write("streamlit run --server.port 80 app.py >/dev/null")
+    f.write("git clone -l -s "+input_ +"\n")
+    f.write("OUTPUT=$(basename " +input_+" .git)\n")
+    f.write("cd " +""" $OUTPUT """+"\n")
+    f.write("pip install -r requirements.txt >> outputpip")
+    f.write("echo finish >> outputpip")
+    f.write("streamlit run --server.port 80 app.py >/dev/null")
 
-b3=st.button('ls?')
+b3=st.button('cmod?')
 if b3:
-  os.system('sudo apt update')
+  os.system('chmod +x script.sh')
   
 b4=st.button('bash?')
 if b4:
