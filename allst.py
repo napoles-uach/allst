@@ -39,4 +39,4 @@ with open('script.sh', 'w') as f:
   
 b3=st.button('ls?')
 if b3:
-  subprocess.call("pwd")
+  subprocess.call("/app/allst/script.sh")
