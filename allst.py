@@ -30,7 +30,8 @@ if b2:
 #  st.write(public_url)
 with open('script.sh', 'w') as f:
   f.write("#!/bin/bash\n")
-  f.write("wget "+input_)
+  if input_ is not None:
+    f.write("wget "+input_)
   #f.write("git clone -l -s "+input_ +"\n")
   #f.write("OUTPUT=$(basename " +input_+" .git)\n")
   #f.write("cd " +""" $OUTPUT """+"\n")
