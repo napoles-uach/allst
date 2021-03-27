@@ -39,7 +39,7 @@ with open('script.sh', 'w') as f:
 
 b3=st.button('ls?')
 if b3:
-  os.system('ls')
+  os.system('cat script.sh')
   
 b4=st.button('bash?')
 if b4:
