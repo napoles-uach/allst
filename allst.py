@@ -22,6 +22,10 @@ if b1:
   public_url = ngrok.connect(port='80')
   st.write(public_url)
   os.system("streamlit  --server.port 80 hello  >/dev/null")
+
+b2=st.button('stop?')
+if b2:
+  ngrok.kill()
 #if input_ is not None:
 #  st.write(public_url)
 #  with open('script.sh', 'w') as f:
