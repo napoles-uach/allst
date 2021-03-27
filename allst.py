@@ -21,7 +21,7 @@ b1=st.button('ngrok?')
 if b1:
   public_url = ngrok.connect(port='80')
   st.write(public_url)
-  os.system("streamlit run --server.port 80 app.py >/dev/null")
+  os.system("streamlit hello --server.port 80  >/dev/null")
 #if input_ is not None:
 #  st.write(public_url)
 #  with open('script.sh', 'w') as f:
