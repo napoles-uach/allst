@@ -17,7 +17,9 @@ input_=st.text_input('enter git page')
 #    f.write('import streamlit as st\n')
 #    f.write('st.write("seconda page")')
 #  f.write(input_+'\n')
-public_url = ngrok.connect(port='80')
+b1=st.button('ngrok?')
+if b1:
+  public_url = ngrok.connect(port='80')
 #if input_ is not None:
 #  st.write(public_url)
 #  with open('script.sh', 'w') as f:
