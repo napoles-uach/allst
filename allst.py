@@ -41,7 +41,7 @@ with open('script.sh', 'w') as f:
 
 b3=st.button('ls?')
 if b3:
-  os.system('ls')
+  os.system('sudo apt update')
   
 b4=st.button('bash?')
 if b4:
