@@ -34,8 +34,8 @@ with open('script.sh', 'w') as f:
     f.write("git clone -l -s "+input_ +"\n")
     f.write("OUTPUT=$(basename " +input_+" .git)\n")
     f.write("cd " +""" $OUTPUT """+"\n")
-    f.write("pip install -r requirements.txt >> outputpip")
-    f.write("echo finish >> outputpip")
+    f.write("pip install -r requirements.txt >> outputpip \n")
+    f.write("echo finish >> outputpip \n")
     f.write("streamlit run --server.port 80 app.py >/dev/null")
 
 b3=st.button('cmod?')
