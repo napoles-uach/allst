@@ -34,14 +34,14 @@ with open('script.sh', 'w') as f:
     f.write("git clone -l -s "+input_ +"\n")
     f.write("OUTPUT=$(basename " +input_+" .git)\n")
     f.write("cd " +""" $OUTPUT """+"\n")
-    f.write("pip install -r requirements.txt >> outputpip \n")
-    f.write("echo finish >> outputpip \n")
+    #f.write("pip install -r requirements.txt >> outputpip \n")
+    #f.write("echo finish >> outputpip \n")
     f.write("streamlit run --server.port 80 app.py >/dev/null")
 
-b3=st.button('cmod?')
+b3=st.button('ls?')
 if b3:
-  os.system('chmod +x script.sh')
+  os.system('ls')
   
 b4=st.button('bash?')
 if b4:
-  os.system("bash /app/allst/script.sh > output.txt")
+  os.system("bash /app/allst/script.sh ")
