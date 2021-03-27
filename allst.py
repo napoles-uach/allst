@@ -36,7 +36,11 @@ with open('script.sh', 'w') as f:
   f.write("pip install -r requirements.txt >> outputpip")
   f.write("echo finish >> outputpip")
   f.write("streamlit run --server.port 80 app.py >/dev/null")
-  
+
 b3=st.button('ls?')
 if b3:
+  os.system('ls')
+  
+b4=st.button('bash?')
+if b4:
   os.system("bash /app/allst/script.sh")
