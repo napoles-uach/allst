@@ -21,7 +21,7 @@ b1=st.button('ngrok?')
 if b1:
   public_url = ngrok.connect(port='80')
   st.write(public_url)
-  os.system("streamlit  --server.port 80 hello  >/dev/null")
+  #os.system("streamlit  --server.port 80 hello  >/dev/null")
 
 b2=st.button('stop?')
 if b2:
@@ -31,11 +31,11 @@ if b2:
 with open('script.sh', 'w') as f:
   f.write("#!/bin/bash\n")
   f.write("git clone -l -s "+input_ +"\n")
-#    f.write("OUTPUT=$(basename " +input_+" .git)\n")
-#    f.write("cd " +""" $OUTPUT """+"\n")
-#    f.write("pip install -r requirements.txt >> outputpip")
-#    f.write("echo finish >> outputpip")
-#    f.write("streamlit run --server.port 80 app.py >/dev/null")
+  f.write("OUTPUT=$(basename " +input_+" .git)\n")
+  f.write("cd " +""" $OUTPUT """+"\n")
+  f.write("pip install -r requirements.txt >> outputpip")
+  f.write("echo finish >> outputpip")
+  f.write("streamlit run --server.port 80 app.py >/dev/null")
   
 b3=st.button('ls?')
 if b3:
